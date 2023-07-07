@@ -7039,8 +7039,8 @@ background-color : #4444 ;
   ax-height : 90vh ;
   border-radius: 3px ;
   ackground-color: cyan ;
-  background-color: #0006 ;
-  box-shadow: 0px 0px 2px #000 ;
+  background-color: #0000 ;
+  box-shadow: 0px 0px 0px #000 ;
   display: flex ;
   flex-direction: column ;
   justify-content: Space-around ;
@@ -7259,6 +7259,25 @@ overflow-y: scroll ;
   bx-sizing: border-box;
   font-family : 'koho', sans-serif ;
 }
+.season_twit_content{
+  min-width: 98% ;
+  max-width: 98% ;
+  min-height: 0vh ;
+  ackground-color: #242526 ;
+  scroll-snap-type: x mandatory;    
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+  border-radius: 7px ;
+  margin-right: % ;
+  margin-top: 1% ;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+  bx-sizing: border-box;
+  font-family : 'koho', sans-serif ;
+}
 
 .twit_content section:nth-child(1),
 .twit_content section:nth-child(2) {
@@ -7317,6 +7336,30 @@ padding-bottom : 10% ;
   max-height: 70px ;
   max-width: 80% ;
   margin-top: 2%;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+  no-repeat-center-center:fixed;
+  background-repeat: no-repeat ;
+     -webkit-background-size: cover ;
+     -moz-background-size: cover ;
+     -o-background-size: cover ;
+     background-size: cover ; 
+     background-position: center center;
+     position: relative ;
+  font-family : 'koho', sans-serif ;
+}
+.season_twit_content nav{ 
+  border-radius: 7px ;
+  ord-break: break-all;
+  verflow-x: hidden ;
+   croll-snap-align: start;
+  in-height: 100% ;
+  min-width: 80% ;
+  max-height: 95vh ;
+  max-width: 80% ;
+  margin-top: 2%;
+  padding : 10% ;
   display: flex ;
   align-items: center ;
   justify-content: center ;
@@ -32242,7 +32285,7 @@ color_thief()
           $(cover).addClass("twit_cover")
           $(image).addClass("twit_profileimg")
           $(post).addClass("twit_post")
-          $(hold).addClass("twit_content")
+          $(hold).addClass("season_twit_content")
              hold.style.display = "flex"
           $(text).addClass("season_twit_text")
           $(episode_rate).addClass("episode_rate")
